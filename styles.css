@@ -391,10 +391,41 @@ section {
     color: var(--primary-gold);
 }
 
-.linkedin-link {
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
     margin-top: 0.5rem;
+}
+
+.linkedin-link,
+.twitter-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.linkedin-link {
     color: var(--accent-blue) !important;
-    font-weight: 600;
+}
+
+.linkedin-link:hover {
+    background: rgba(37, 99, 235, 0.1);
+    transform: scale(1.1);
+}
+
+.twitter-link {
+    color: #1DA1F2 !important;
+}
+
+.twitter-link:hover {
+    background: rgba(29, 161, 242, 0.1);
+    transform: scale(1.1);
 }
 
 /* Contact Section */
