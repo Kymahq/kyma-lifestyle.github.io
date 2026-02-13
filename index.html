@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyma Lifestyle - Premium Lifestyle Benefits for Card Issuers</title>
-    <meta name="description" content="Partner with Kyma to offer premium lifestyle benefits that drive card spend and customer retention.">
+    <title>Kyma — AI Concierge for Bank Loyalty Programs</title>
+    <meta name="description" content="Transform your rewards experience with Kyma's AI-powered concierge layer for bank loyalty programs via WhatsApp and iMessage.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -14,7 +14,12 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">KYMA</div>
-                <a href="#contact" class="nav-cta">Partner With Us</a>
+                <div class="nav-links">
+                    <a href="#use-cases">Use Cases</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#team">Team</a>
+                </div>
+                <a href="#contact" class="nav-cta">Schedule a Demo</a>
             </div>
         </div>
     </nav>
@@ -22,124 +27,194 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Drive Card Spend & Retention with Premium Lifestyle Benefits
-                </h1>
-                <p class="hero-subtitle">
-                    Partner with Kyma to integrate curated lifestyle experiences into your card programs.
-                    Increase customer engagement, transaction volumes, and brand differentiation.
-                </p>
-                <a href="#contact" class="cta-button">Schedule a Partnership Call</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partner Benefits Section -->
-    <section class="benefits">
-        <div class="container">
-            <h2 class="section-title">Why Partner with Kyma?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">📈</div>
-                    <h3>Increase Card Spend</h3>
-                    <p>Exclusive lifestyle offers drive higher transaction volumes and average spend per customer.</p>
+            <div class="hero-wrapper">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Your Customers' AI Concierge for Rewards
+                    </h1>
+                    <p class="hero-subtitle">
+                        Layer Kyma's white-label AI concierge on top of your existing loyalty portal.
+                        Your UHNI customers get personalized assistance via WhatsApp and iMessage —
+                        driving higher redemption, more transactions, and measurable ROI.
+                    </p>
+                    <a href="#contact" class="cta-button">Schedule a Demo</a>
+                    <div class="platform-badges">
+                        <i class="fab fa-whatsapp"></i>
+                        <i class="fas fa-comment"></i>
+                    </div>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔒</div>
-                    <h3>Boost Retention</h3>
-                    <p>Premium benefits reduce churn and increase customer lifetime value through differentiated experiences.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⚡</div>
-                    <h3>Fast Integration</h3>
-                    <p>Ready-to-deploy platform integrates seamlessly with your existing card programs.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Brand Differentiation</h3>
-                    <p>Stand out in a competitive market with exclusive lifestyle benefits your competitors can't match.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🤝</div>
-                    <h3>Revenue Sharing</h3>
-                    <p>Flexible partnership models with shared economics on merchant transactions.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🌐</div>
-                    <h3>White-Label Solution</h3>
-                    <p>Fully customizable platform that aligns with your brand identity and customer experience.</p>
+                <div class="hero-chat">
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <div class="chat-logo">KYMA</div>
+                            <div class="chat-status">AI Concierge</div>
+                        </div>
+                        <div class="chat-messages" id="chatMessages">
+                            <!-- Messages will be added by JavaScript -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Categories Section -->
-    <section class="services">
+    <!-- Problem Statement Section -->
+    <section class="problem">
         <div class="container">
-            <h2 class="section-title">Curated Lifestyle Experiences</h2>
+            <h2 class="section-title">Loyalty Programs Are Underperforming</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-arrow-trend-down"></i>
+                    </div>
+                    <h3>Low Redemption Rates</h3>
+                    <p>Traditional web portals see minimal engagement. Points expire unused while customers struggle to find value.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>UHNI Expect More</h3>
+                    <p>Ultra-high net worth customers demand white-glove service, not generic self-service portals.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Scale Personalization</h3>
+                    <p>Generic portals can't deliver individualized experiences. Manual concierge services don't scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases" id="use-cases">
+        <div class="container">
+            <h2 class="section-title">What Kyma Does</h2>
             <p class="section-subtitle">
-                Access to premium merchant partners across six key lifestyle categories
+                An AI concierge that handles everything from discovery to post-purchase support
             </p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">✈️</div>
-                    <h3>Travel & Hospitality</h3>
-                    <p>Luxury hotels, resorts, exclusive travel experiences, and vacation packages.</p>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3>Discover & Optimize</h3>
+                    <p>Check rewards balance, find personalized offers, get tailored recommendations, and optimize point usage across your entire loyalty catalog.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🍽️</div>
-                    <h3>Fine Dining</h3>
-                    <p>Premium restaurant reservations, chef's table experiences, and culinary events.</p>
+                <div class="use-case-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-cart-shopping"></i>
+                    </div>
+                    <h3>Plan & Purchase</h3>
+                    <p>Plan entire trips with custom itineraries. Kyma books flights, hotels, and experiences directly from your loyalty portal on the customer's behalf.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💆</div>
-                    <h3>Wellness & Spa</h3>
-                    <p>Exclusive wellness retreats, spa services, fitness memberships, and health programs.</p>
+                <div class="use-case-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Post-Purchase Support</h3>
+                    <p>Automatic flight check-in, reschedule or cancel bookings, arrange hotel special requests like late checkout or birthday decorations.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🎭</div>
-                    <h3>Entertainment</h3>
-                    <p>VIP event access, concerts, theater shows, and exclusive entertainment experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Comparison -->
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title">The Kyma Difference</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card without">
+                    <h3>Without Kyma</h3>
+                    <ul>
+                        <li>Web portal nobody visits</li>
+                        <li>Generic, untargeted offers</li>
+                        <li>Self-service booking</li>
+                        <li>No post-purchase support</li>
+                        <li>Points expire unused</li>
+                        <li>Low engagement metrics</li>
+                    </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛍️</div>
-                    <h3>Luxury Shopping</h3>
-                    <p>Personal shopping services, exclusive retail access, and luxury brand partnerships.</p>
+                <div class="comparison-card with">
+                    <div class="gold-badge">WITH KYMA</div>
+                    <h3>With Kyma</h3>
+                    <ul>
+                        <li>Text on WhatsApp/iMessage</li>
+                        <li>AI-personalized recommendations</li>
+                        <li>End-to-end concierge booking</li>
+                        <li>Full post-purchase support</li>
+                        <li>Maximized point value</li>
+                        <li>Higher transactions & loyalty</li>
+                    </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🎩</div>
-                    <h3>Concierge Services</h3>
-                    <p>24/7 dedicated lifestyle concierge for personalized assistance and bookings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Kyma -->
+    <section class="why-kyma">
+        <div class="container">
+            <h2 class="section-title">Why Kyma</h2>
+            <div class="differentiators-grid">
+                <div class="differentiator-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>True Personalization</h3>
+                    <p>Transaction history-based recommendations that learn from every interaction. Each customer gets a truly individualized experience.</p>
+                </div>
+                <div class="differentiator-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>Post-Purchase Support</h3>
+                    <p>Not just booking — check-in, reschedule, cancel, special requests. A dedicated assistant that follows through on every detail.</p>
+                </div>
+                <div class="differentiator-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Turnarounds</h3>
+                    <p>No wait times, no call centers. Immediate responses and real-time action on every customer request.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How It Works Section -->
-    <section class="how-it-works">
+    <section class="how-it-works" id="how-it-works">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
             <div class="steps">
                 <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Partnership Setup</h3>
-                    <p>We work with you to customize the benefits package that aligns with your card tiers and target customers.</p>
+                    <div class="step-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Connect</h3>
+                    <p>Integrate Kyma with your existing rewards and loyalty portal via API. No need to rebuild infrastructure.</p>
                 </div>
                 <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Platform Integration</h3>
-                    <p>Seamless integration with your existing systems through APIs or white-label solution.</p>
+                    <div class="step-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Brand</h3>
+                    <p>White-label under your bank's identity. Customers see your brand, not ours.</p>
                 </div>
                 <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Launch & Activate</h3>
-                    <p>Co-branded launch materials, customer onboarding support, and marketing collateral.</p>
+                    <div class="step-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Launch</h3>
+                    <p>Activate for your UHNI customers on WhatsApp and iMessage. They text, we handle the rest.</p>
                 </div>
                 <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Ongoing Management</h3>
-                    <p>Continuous merchant network expansion, customer support, and performance analytics.</p>
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Grow</h3>
+                    <p>Track higher redemption rates, increased transactions, and measurable ROI through our analytics dashboard.</p>
                 </div>
             </div>
         </div>
@@ -150,9 +225,7 @@
         <div class="container">
             <h2 class="section-title">Meet the Team</h2>
             <p class="team-bio">
-                Our team combines venture capital expertise from 100X.VC with product and operations leadership from Tesla.
-                With deep experience in fintech, data science, and startup strategy, we're building the infrastructure that
-                enables card issuers to drive customer engagement and spending through premium lifestyle benefits.
+                Led by founders from 100X.VC, Tesla, and BrowserStack AI Labs, we combine world-class expertise in venture capital, fintech product, and AI engineering. We're building the agentic infrastructure that transforms how banks deliver loyalty experiences to UHNI customers.
             </p>
             <div class="team-grid">
                 <div class="team-member">
@@ -208,8 +281,8 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-content">
-                <h2>Ready to Transform Your Card Program?</h2>
-                <p>Let's discuss how Kyma can help you drive customer engagement and card spend.</p>
+                <h2>Ready to Transform Your Rewards Experience?</h2>
+                <p>Let's discuss how Kyma's AI concierge can drive higher loyalty program engagement and ROI.</p>
                 <div class="contact-options">
                     <a href="mailto:vatsal@kymalifestyle.com" class="contact-button">Email Us</a>
                     <a href="https://linkedin.com/in/vazzup" target="_blank" class="contact-button secondary">Connect on LinkedIn</a>
@@ -224,7 +297,7 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <div class="logo">KYMA</div>
-                    <p>Premium lifestyle benefits for card issuers</p>
+                    <p>AI-powered concierge for bank loyalty programs</p>
                 </div>
                 <div class="footer-right">
                     <a href="mailto:vatsal@kymalifestyle.com">Contact</a>
@@ -232,7 +305,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Kyma Lifestyle. All rights reserved.</p>
+                <p>&copy; 2026 Kyma Lifestyle. All rights reserved.</p>
             </div>
         </div>
     </footer>
