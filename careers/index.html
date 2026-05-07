@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers · Kyma</title>
+    <meta name="description" content="Build agentic AI systems that power conversational engagement for enterprises. Open roles at Kyma.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .careers-hero {
+            padding: 140px 20px 60px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .careers-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .careers-hero .container { position: relative; z-index: 1; }
+        .careers-eyebrow {
+            display: inline-block;
+            color: var(--primary-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .careers-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--secondary-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            max-width: 800px;
+        }
+        .careers-subtitle {
+            color: var(--text-gray);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            max-width: 700px;
+        }
+        .roles-section {
+            padding: 60px 20px 80px;
+            background: var(--bg-dark);
+        }
+        .roles-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .role-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .role-card:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+        }
+        .role-info h3 {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .role-info p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+        .role-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+        .role-meta span i {
+            color: var(--primary-gold);
+            margin-right: 0.4rem;
+        }
+        .role-arrow {
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .empty-state {
+            text-align: center;
+            color: var(--text-gray);
+            padding: 2rem;
+        }
+        @media (max-width: 768px) {
+            .careers-hero { padding: 110px 16px 40px; }
+            .careers-title { font-size: 2.1rem; }
+            .careers-subtitle { font-size: 1.02rem; }
+            .roles-section { padding: 40px 16px 60px; }
+            .role-card { flex-direction: column; align-items: flex-start; padding: 1.5rem; }
+            .role-info h3 { font-size: 1.2rem; }
+            .role-arrow { display: none; }
+        }
+        @media (max-width: 480px) {
+            .careers-title { font-size: 1.7rem; }
+            .careers-subtitle { font-size: 0.95rem; }
+            .role-card { padding: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../" class="logo" style="text-decoration: none;">KYMA</a>
+                <div class="nav-links">
+                    <a href="../#engage">Platform</a>
+                    <a href="../#how-it-works">How It Works</a>
+                    <a href="../#team">Team</a>
+                    <a href="./">Careers</a>
+                </div>
+                <a href="../#contact" class="nav-cta">Schedule a Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="careers-hero">
+        <div class="container">
+            <span class="careers-eyebrow">Careers at Kyma</span>
+            <h1 class="careers-title">Build the agentic layer for enterprise conversations.</h1>
+            <p class="careers-subtitle">
+                We're a small team shipping production AI systems for banks and loyalty programs.
+                Real ownership, real users, real impact — from day one.
+            </p>
+        </div>
+    </section>
+
+    <section class="roles-section">
+        <div class="container">
+            <div class="roles-grid">
+                <a href="software-engineer-intern/" class="role-card">
+                    <div class="role-info">
+                        <h3>Software Engineer Intern — AI / Agentic Systems</h3>
+                        <p>Build real-world agentic AI systems and production infrastructure powering conversational experiences.</p>
+                        <div class="role-meta">
+                            <span><i class="fas fa-location-dot"></i>Mumbai / Remote</span>
+                            <span><i class="fas fa-briefcase"></i>Internship</span>
+                        </div>
+                    </div>
+                    <div class="role-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">KYMA</div>
+                    <p>Conversational engagement and marketing stack for enterprises</p>
+                </div>
+                <div class="footer-right">
+                    <a href="../#engage">Engage</a>
+                    <a href="../#sell">Sell</a>
+                    <a href="../#analyze">Analyze</a>
+                    <a href="./">Careers</a>
+                    <a href="mailto:vatsal@kymalifestyle.com">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kyma Lifestyle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

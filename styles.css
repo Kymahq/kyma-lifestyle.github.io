@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -27,7 +28,10 @@ body {
     color: var(--text-light);
     background-color: var(--bg-dark);
     overflow-x: hidden;
+    width: 100%;
 }
+
+img, video, iframe { max-width: 100%; height: auto; }
 
 .container {
     max-width: 1200px;
@@ -39,6 +43,8 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
@@ -51,7 +57,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 0;
-    gap: 2rem;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.logo, .nav-cta {
+    flex-shrink: 0;
 }
 
 .logo {
@@ -691,14 +702,41 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
     }
 
+    .nav-content {
+        gap: 0.75rem;
+        padding: 0.95rem 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        letter-spacing: 0.18em;
+    }
+
+    .nav-cta {
+        padding: 0.55rem 1rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.03em;
+    }
+
+    .hero {
+        padding: 110px 0 60px;
+        min-height: auto;
+    }
+
     .hero-wrapper {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
     }
 
     .hero-text {
@@ -707,39 +745,98 @@ section {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        line-height: 1.65;
     }
 
     .platform-badges {
         justify-content: center;
+        gap: 1.25rem;
+        font-size: 1.75rem;
     }
 
     .chat-container {
         max-width: 100%;
     }
 
+    .chat-messages {
+        height: 380px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
     .section-title {
         font-size: 2rem;
     }
 
-    .pillar-grid {
-        grid-template-columns: 1fr;
+    .section-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
     }
 
-    .steps {
-        grid-template-columns: 1fr;
+    .pillar-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
     }
 
+    .pillar-grid,
+    .steps,
     .team-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-top: 2rem;
+    }
+
+    .pillar-card,
+    .team-member {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .step h3,
+    .pillar-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .team-bio {
+        font-size: 1rem;
+        margin: 1.5rem auto 2.5rem;
+    }
+
+    .member-photo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .photo-placeholder {
+        font-size: 2.25rem;
+    }
+
+    .team-member h3 {
+        font-size: 1.35rem;
+    }
+
+    .contact {
+        padding: 70px 0;
     }
 
     .contact-content h2 {
         font-size: 2rem;
+    }
+
+    .contact-content p {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer {
+        padding: 2.5rem 0 1.5rem;
     }
 
     .footer-content {
@@ -747,23 +844,81 @@ section {
         text-align: center;
     }
 
-    .nav-cta {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.85rem;
+    .footer-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
+    .container {
+        padding: 0 16px;
     }
 
-    .hero-subtitle {
-        font-size: 1rem;
+    .nav-content {
+        gap: 0.5rem;
+        padding: 0.85rem 0;
     }
 
     .logo {
+        font-size: 1.3rem;
+        letter-spacing: 0.12em;
+    }
+
+    .nav-cta {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.74rem;
+        border-width: 1.5px;
+        letter-spacing: 0.02em;
+    }
+
+    .hero {
+        padding: 100px 0 50px;
+    }
+
+    .hero-title {
+        font-size: 1.95rem;
+        line-height: 1.18;
+    }
+
+    .hero-subtitle {
+        font-size: 0.98rem;
+    }
+
+    .cta-button {
+        padding: 0.85rem 2rem;
+        font-size: 1rem;
+    }
+
+    .platform-badges {
         font-size: 1.5rem;
+        gap: 1rem;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .pillar-card,
+    .team-member {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact-content h2 {
+        font-size: 1.7rem;
     }
 
     .contact-options {
@@ -772,15 +927,53 @@ section {
 
     .contact-button {
         width: 100%;
+        text-align: center;
     }
 
     .chat-messages {
-        height: 350px;
+        height: 340px;
         padding: 1rem;
+    }
+
+    .chat-header {
+        padding: 1rem;
+    }
+
+    .chat-logo {
+        font-size: 1.1rem;
     }
 
     .message-bubble {
         font-size: 0.9rem;
-        padding: 0.8rem 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .footer-right {
+        gap: 1rem 1.5rem;
+        font-size: 0.92rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .nav-content {
+        gap: 0.4rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        letter-spacing: 0.1em;
+    }
+
+    .nav-cta {
+        padding: 0.45rem 0.65rem;
+        font-size: 0.7rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
     }
 }
