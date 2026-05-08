@@ -205,8 +205,10 @@ img, video, iframe { max-width: 100%; height: auto; }
 /* Chat Mockup */
 .hero-chat {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .chat-container {
@@ -243,10 +245,26 @@ img, video, iframe { max-width: 100%; height: auto; }
 .chat-messages {
     padding: 1.5rem;
     height: 400px;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(212, 175, 55, 0.3) transparent;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.3);
+    border-radius: 2px;
 }
 
 .chat-message {
@@ -975,5 +993,492 @@ section {
 
     .hero-title {
         font-size: 1.75rem;
+    }
+}
+
+/* =====================================================
+   Lending salesperson — hero supporting elements
+   ===================================================== */
+
+.hero-tagline {
+    font-size: 1.35rem;
+    color: var(--secondary-gold);
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+}
+
+.audience-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.audience-strip span {
+    background: rgba(212, 175, 55, 0.12);
+    color: var(--secondary-gold);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.channel-strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.75rem;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.channel-strip .channel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    background: rgba(255, 255, 255, 0.02);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.channel-strip .channel.live {
+    color: var(--accent-green);
+    border-color: rgba(37, 211, 102, 0.4);
+    background: rgba(37, 211, 102, 0.08);
+}
+
+.channel-strip .channel.soon {
+    color: var(--text-light);
+}
+
+.channel-strip .channel.more {
+    background: transparent;
+    border: none;
+    color: var(--text-gray);
+    padding: 0.4rem 0;
+    font-weight: 400;
+    font-size: 0.82rem;
+}
+
+.voice-soon {
+    display: inline-block;
+    margin-left: 0.35rem;
+    padding: 0.1rem 0.45rem;
+    background: rgba(212, 175, 55, 0.18);
+    color: var(--primary-gold);
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* =====================================================
+   Demo tabs + chat surface additions
+   ===================================================== */
+
+.demo-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    max-width: 400px;
+    margin: 0 auto 0.75rem;
+}
+
+.demo-tab {
+    flex: 1 1 calc(33.333% - 0.4rem);
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    color: var(--text-gray);
+    font-family: inherit;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.55rem 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    line-height: 1.25;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.demo-tab:hover {
+    color: var(--text-light);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.demo-tab.active {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(244, 228, 193, 0.12));
+    color: var(--secondary-gold);
+    border-color: var(--primary-gold);
+}
+
+.demo-channel-caption {
+    max-width: 400px;
+    margin: 0.75rem auto 0;
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 0.78rem;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+/* Stage ribbon inside chat */
+.stage-ribbon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 0.6rem 0.9rem;
+    background: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    justify-content: center;
+}
+
+.stage {
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s ease;
+    white-space: nowrap;
+}
+
+.stage.pending {
+    color: rgba(160, 160, 160, 0.5);
+    background: transparent;
+}
+
+.stage.active {
+    color: var(--bg-dark);
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5);
+    animation: stagePulse 1.6s ease-in-out infinite;
+}
+
+.stage.done {
+    color: var(--secondary-gold);
+    background: rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.stage.done::before {
+    content: '✓ ';
+    opacity: 0.85;
+}
+
+@keyframes stagePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.45); }
+    50% { box-shadow: 0 0 0 6px rgba(212, 175, 55, 0); }
+}
+
+/* =====================================================
+   Rich WhatsApp-primitive bubbles
+   ===================================================== */
+
+.chat-message.system {
+    justify-content: center;
+}
+
+.system-bubble {
+    background: rgba(212, 175, 55, 0.08);
+    color: var(--secondary-gold);
+    font-size: 0.78rem;
+    font-style: italic;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    border: 1px dashed rgba(212, 175, 55, 0.35);
+    max-width: 85%;
+}
+
+.system-bubble i {
+    margin-right: 0.3rem;
+    opacity: 0.8;
+}
+
+.chat-divider-row {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+
+.chat-divider {
+    color: var(--text-gray);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.85rem;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 999px;
+}
+
+.consent-bubble {
+    border-left: 3px solid var(--primary-gold);
+    padding: 0.85rem 1rem !important;
+}
+
+.consent-text {
+    margin-bottom: 0.65rem;
+    font-size: 0.92rem;
+}
+
+.consent-actions {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.consent-btn {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.consent-btn.primary {
+    background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+    color: var(--bg-dark);
+    border-color: transparent;
+}
+
+.flow-card {
+    padding: 0.85rem 1rem !important;
+    border-left: 3px solid var(--accent-green);
+    width: 100%;
+    max-width: 90% !important;
+}
+
+.flow-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.55rem;
+}
+
+.flow-header i {
+    margin-right: 0.35rem;
+}
+
+.flow-field {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.flow-field:last-of-type {
+    border-bottom: none;
+}
+
+.flow-label {
+    color: var(--text-gray);
+}
+
+.flow-input {
+    color: var(--text-light);
+    opacity: 0.5;
+    font-family: monospace;
+    letter-spacing: 0.1em;
+}
+
+.flow-submit {
+    margin-top: 0.6rem;
+    text-align: center;
+    background: var(--accent-green);
+    color: var(--bg-dark);
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 0.4rem;
+    border-radius: 6px;
+    letter-spacing: 0.05em;
+}
+
+.offer-card {
+    padding: 0.85rem 1rem !important;
+    border-left: 3px solid var(--primary-gold);
+    width: 100%;
+    max-width: 90% !important;
+}
+
+.offer-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.55rem;
+}
+
+.offer-header i {
+    margin-right: 0.35rem;
+}
+
+.offer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    gap: 0.5rem;
+}
+
+.offer-row:last-child {
+    border-bottom: none;
+}
+
+.offer-amount {
+    font-weight: 700;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.offer-meta {
+    color: var(--text-gray);
+    font-size: 0.78rem;
+    margin-top: 0.1rem;
+}
+
+.offer-tag {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--secondary-gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+/* =====================================================
+   Sell-section proof ribbon (static 7-stage strip)
+   ===================================================== */
+
+.proof-ribbon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+
+.proof-ribbon span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--secondary-gold);
+    padding: 0.35rem 0.85rem;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.06);
+    position: relative;
+}
+
+.proof-ribbon span:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* =====================================================
+   Responsive overrides for new elements
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .hero-tagline {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .audience-strip {
+        justify-content: center;
+    }
+
+    .channel-strip {
+        justify-content: center;
+        font-size: 0.82rem;
+    }
+
+    .channel-strip .channel.more {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .demo-tab {
+        font-size: 0.68rem;
+        padding: 0.5rem 0.4rem;
+    }
+
+    .stage {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.45rem;
+    }
+
+    .proof-ribbon span {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .proof-ribbon span:not(:last-child)::after {
+        right: -0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-tagline {
+        font-size: 0.98rem;
+    }
+
+    .audience-strip span {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .demo-tab {
+        font-size: 0.62rem;
+        padding: 0.45rem 0.3rem;
+    }
+
+    .demo-channel-caption {
+        font-size: 0.7rem;
+    }
+
+    .proof-ribbon {
+        gap: 0.35rem;
+    }
+
+    .proof-ribbon span {
+        font-size: 0.62rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .proof-ribbon span:not(:last-child)::after {
+        display: none;
     }
 }

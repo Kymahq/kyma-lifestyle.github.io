@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyma — Conversational Engagement & Marketing Stack for Enterprises</title>
-    <meta name="description" content="Kyma helps enterprises engage customers through AI-powered conversational agents, drive upsell via high-intent interactions, and unlock deep analytics for targeted marketing.">
+    <title>Kyma — The AI salesperson for lenders</title>
+    <meta name="description" content="Kyma is the AI salesperson for NBFCs, PLAs, LSPs and DSAs in the Indian lending ecosystem. Engages every lead, reads intent, cross-sells the right loan, closes the application — on WhatsApp today, voice next, cross-platform from day one.">
+
+    <meta property="og:title" content="Kyma — The AI salesperson for lenders">
+    <meta property="og:description" content="An AI salesperson for NBFCs, PLAs, LSPs and DSAs. Engage every lead, read intent, cross-sell the right loan, close the application — across WhatsApp, voice (soon), and every channel your borrower is on.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kymalifestyle.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kyma — The AI salesperson for lenders">
+    <meta name="twitter:description" content="An AI salesperson for NBFCs, PLAs, LSPs and DSAs — on WhatsApp today, voice next, cross-platform from day one.">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -31,30 +40,44 @@
             <div class="hero-wrapper">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        The Conversational Engagement Stack for Enterprises
+                        Your AI salesperson for lending.
                     </h1>
-                    <p class="hero-subtitle">
-                        Kyma gives enterprises an AI agent layer that drives customer engagement,
-                        powers intelligent upsell, and unlocks conversation-driven analytics —
-                        starting with banks and loyalty programs.
+                    <p class="hero-tagline">
+                        Engages every lead. Reads intent. Sells the right product. Closes the loop.
                     </p>
+                    <p class="hero-subtitle">
+                        Built for NBFCs, PLAs, LSPs and DSAs — Kyma converses with every inbound lead on the channel they're already on, understands what they actually need, cross-sells the right loan, and walks them all the way to a KYC-complete, consented application.
+                    </p>
+                    <div class="audience-strip">
+                        <span>NBFCs</span>
+                        <span>PLAs</span>
+                        <span>LSPs</span>
+                        <span>DSAs</span>
+                    </div>
                     <a href="#contact" class="cta-button">Schedule a Demo</a>
-                    <div class="platform-badges">
-                        <i class="fas fa-comments"></i>
-                        <i class="fas fa-bullhorn"></i>
-                        <i class="fas fa-chart-pie"></i>
+                    <div class="channel-strip">
+                        <span class="channel live"><i class="fab fa-whatsapp"></i> WhatsApp</span>
+                        <span class="channel soon"><i class="fas fa-phone"></i> Voice <em class="voice-soon">Coming soon</em></span>
+                        <span class="channel more">+ web, in-app, SMS, social — wherever your customer is</span>
                     </div>
                 </div>
                 <div class="hero-chat">
+                    <div class="demo-tabs" id="demoTabs">
+                        <button class="demo-tab active" data-scenario="0">Reads intent. Upsells.</button>
+                        <button class="demo-tab" data-scenario="1">Knows your customer. Cross-sells.</button>
+                        <button class="demo-tab" data-scenario="2">Remembers. Recovers drop-offs.</button>
+                    </div>
                     <div class="chat-container">
                         <div class="chat-header">
                             <div class="chat-logo">KYMA</div>
-                            <div class="chat-status">AI Agent</div>
+                            <div class="chat-status">AI Salesperson · WhatsApp</div>
                         </div>
+                        <div class="stage-ribbon" id="stageRibbon"></div>
                         <div class="chat-messages" id="chatMessages">
                             <!-- Messages will be added by JavaScript -->
                         </div>
                     </div>
+                    <p class="demo-channel-caption">Shown on WhatsApp. Same agent runs on voice (soon), web, in-app, SMS.</p>
                 </div>
             </div>
         </div>
@@ -69,7 +92,7 @@
                 </div>
                 <h2 class="section-title">Engage</h2>
                 <p class="section-subtitle">
-                    An AI agent layer on top of enterprise products that creates a simpler conversational interface, driving action and building habits.
+                    Meet every lead the moment they raise their hand — and actually understand what they're asking for.
                 </p>
             </div>
             <div class="pillar-grid">
@@ -77,22 +100,22 @@
                     <div class="icon-wrapper">
                         <i class="fas fa-comment-dots"></i>
                     </div>
-                    <h3>Conversational Interface</h3>
-                    <p>Meet customers where they are. Kyma deploys AI agents on WhatsApp, iMessage, and web chat that understand your product catalog and take actions on behalf of users.</p>
+                    <h3>Instant first response</h3>
+                    <p>Reach every lead the second they raise their hand — on the channel they came in from. Rich WhatsApp UX today (Lists, Buttons, CTAs, Flows), voice and other channels coming.</p>
                 </div>
                 <div class="pillar-card">
                     <div class="icon-wrapper">
-                        <i class="fas fa-compass"></i>
+                        <i class="fas fa-bullseye"></i>
                     </div>
-                    <h3>Deeper Product Discovery</h3>
-                    <p>Users discover features and benefits they never knew existed. When a cardholder sees the real value of their points, they transact more, earn more, and redeem more.</p>
+                    <h3>Reads intent, not menus</h3>
+                    <p>Kyma understands free-text conversation — vernacular, typos, half-questions and all. No decision-tree menus, no rigid forms that kill drop-offs. Just a salesperson who actually listens.</p>
                 </div>
                 <div class="pillar-card">
                     <div class="icon-wrapper">
                         <i class="fas fa-rotate"></i>
                     </div>
-                    <h3>The Virtuous Cycle</h3>
-                    <p>Higher engagement drives higher product usage. Higher usage drives more value. More value drives deeper loyalty. Kyma powers this flywheel.</p>
+                    <h3>Memory that compounds</h3>
+                    <p>A lead who ghosts on Tuesday is picked up where they left off on Friday — by name, in context, even if they switch channels. Every conversation makes the next one smarter.</p>
                 </div>
             </div>
         </div>
@@ -107,30 +130,39 @@
                 </div>
                 <h2 class="section-title">Sell</h2>
                 <p class="section-subtitle">
-                    Turn engaged, high-intent conversations into revenue. Identify cross-sell and upsell moments in real time.
+                    From "I might need a loan" to a signed, consented, KYC-complete application — without a human in the loop.
                 </p>
+            </div>
+            <div class="proof-ribbon" aria-label="What Kyma runs end-to-end">
+                <span>Consultation</span>
+                <span>PAN</span>
+                <span>Consent</span>
+                <span>KYC</span>
+                <span>Credit Check</span>
+                <span>Offer</span>
+                <span>Finalize</span>
             </div>
             <div class="pillar-grid">
                 <div class="pillar-card">
                     <div class="icon-wrapper">
-                        <i class="fas fa-bullseye"></i>
+                        <i class="fas fa-wand-magic-sparkles"></i>
                     </div>
-                    <h3>Intent Detection</h3>
-                    <p>Kyma reads conversational signals to detect purchase intent and life events. A customer buying a laptop for their new startup is a signal worth acting on.</p>
+                    <h3>Intent-aware product matching</h3>
+                    <p>A salaried lead asking for ₹50K and a self-employed lead asking for ₹50K aren't the same conversation. Kyma surfaces the right product — personal, business, top-up, balance transfer — based on what the borrower actually needs.</p>
                 </div>
                 <div class="pillar-card">
                     <div class="icon-wrapper">
                         <i class="fas fa-hand-holding-dollar"></i>
                     </div>
-                    <h3>Contextual Offers</h3>
-                    <p>Surface the right product at the right moment. That startup founder? Congratulate them and suggest the bank's new business loan — naturally, within the conversation.</p>
+                    <h3>Cross-sell in context</h3>
+                    <p>Existing customers get top-ups, BT offers, and secured upgrades surfaced naturally — only when the conversation warrants it. Kyma references repayment history and prior products by name, the way a real DSA would.</p>
                 </div>
                 <div class="pillar-card">
                     <div class="icon-wrapper">
-                        <i class="fas fa-chart-simple"></i>
+                        <i class="fas fa-shield-halved"></i>
                     </div>
-                    <h3>Revenue Attribution</h3>
-                    <p>Track which conversational touchpoints drive conversions. Know exactly which upsell moments are working and optimize your product positioning.</p>
+                    <h3>Closes the application</h3>
+                    <p>RBI-aligned consent gate before any KYC pull. Structured KYC via WhatsApp Flows, not free-text. Soft retries on PAN and identity mismatches so a typo doesn't lose a lead. Clean handoff to a credit officer at finalization.</p>
                 </div>
             </div>
         </div>
@@ -145,7 +177,7 @@
                 </div>
                 <h2 class="section-title">Analyze</h2>
                 <p class="section-subtitle">
-                    Go deep into conversation data. Understand behavior, segment audiences, and launch targeted marketing campaigns.
+                    See your funnel as it actually behaves — every conversation, every stage, every drop-off — and act on it.
                 </p>
             </div>
             <div class="pillar-grid">
@@ -153,22 +185,22 @@
                     <div class="icon-wrapper">
                         <i class="fas fa-magnifying-glass-chart"></i>
                     </div>
-                    <h3>Conversation Intelligence</h3>
-                    <p>Every conversation is a data point. Kyma captures intent signals, product interest, sentiment, and behavioral patterns across millions of interactions.</p>
+                    <h3>Stage-level conversion</h3>
+                    <p>Lead → engaged → qualified → KYC-complete → offer-accepted → disbursed. Know exactly where this lender's funnel breaks, by stage, by source, by product.</p>
                 </div>
                 <div class="pillar-card">
                     <div class="icon-wrapper">
                         <i class="fas fa-filter"></i>
                     </div>
-                    <h3>Smart Segmentation</h3>
-                    <p>Slice and dice your customer base by behavior, not just demographics. Find users transacting over 3L/month through corporate accounts who are timely on loans and have growing balances.</p>
+                    <h3>Intent & source attribution</h3>
+                    <p>What are leads actually asking for? Which DSAs, which lead-gen sources, which products are converting? Slice by intent tags, source pipeline, and per-DSA performance.</p>
                 </div>
                 <div class="pillar-card">
                     <div class="icon-wrapper">
                         <i class="fas fa-paper-plane"></i>
                     </div>
-                    <h3>Campaign Engine</h3>
-                    <p>Go from insight to action. Build targeted campaigns and push them through the same conversational channel your customers already trust.</p>
+                    <h3>Compliance-ready transcripts</h3>
+                    <p>Every conversation is captured end-to-end for audit, QA, and RBI/DPDP compliance. Search transcripts by user, by stage, by outcome — and feed insights back into smarter conversations.</p>
                 </div>
             </div>
         </div>
@@ -184,28 +216,28 @@
                         <i class="fas fa-plug"></i>
                     </div>
                     <h3>Integrate</h3>
-                    <p>Connect Kyma to your existing systems via API — loyalty platforms, core banking, CRM, product catalogs. No infrastructure rebuild required.</p>
+                    <p>Connect Kyma to your stack via API — LOS / LMS, credit bureaus, core banking, CRM, and lead-source pipelines (Meta, Google, aggregators). No infrastructure rebuild required.</p>
                 </div>
                 <div class="step">
                     <div class="step-icon">
                         <i class="fas fa-sliders"></i>
                     </div>
                     <h3>Configure</h3>
-                    <p>Define your product catalog, set business rules for upsell triggers, and customize the AI agent's personality to match your brand voice.</p>
+                    <p>Define your loan products, eligibility rules, consent flows, and brand voice. Kyma adapts to your offer matrix and your DSA workflow — not the other way around.</p>
                 </div>
                 <div class="step">
                     <div class="step-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3>Deploy</h3>
-                    <p>Launch across WhatsApp, iMessage, web chat, or your own app. White-labeled under your brand. Customers see you, not us.</p>
+                    <p>WhatsApp Business API live today (number you bring or we provision). Voice next. Web chat, in-app, SMS and social channels on the same conversation graph as we expand — your customer's history follows them.</p>
                 </div>
                 <div class="step">
                     <div class="step-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Optimize</h3>
-                    <p>Monitor engagement metrics, conversion rates, and campaign performance through the analytics dashboard. Iterate and scale.</p>
+                    <p>Watch conversion lift at every stage. Tune offer logic, intent prompts, and cross-sell triggers. The salesperson gets sharper with every conversation.</p>
                 </div>
             </div>
         </div>
@@ -216,7 +248,7 @@
         <div class="container">
             <h2 class="section-title">Meet the Team</h2>
             <p class="team-bio">
-                Led by founders from 100X.VC, Tesla, and BrowserStack AI Labs, we bring deep expertise in conversational AI, enterprise SaaS, and marketing technology. We're building the agentic infrastructure that transforms how enterprises engage, sell to, and understand their customers.
+                Led by founders from 100X.VC, Tesla, and BrowserStack AI Labs, we bring deep expertise in conversational AI, lending workflows, and enterprise infrastructure. We're building the AI salesperson the lending industry has been waiting for.
             </p>
             <div class="team-grid">
                 <div class="team-member">
@@ -272,8 +304,8 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-content">
-                <h2>Ready to Transform Enterprise Engagement?</h2>
-                <p>Let's discuss how Kyma can drive deeper customer engagement, higher conversion, and actionable insights for your business.</p>
+                <h2>Ready to put an AI salesperson on every lead?</h2>
+                <p>Let's talk about your funnel — where leads drop, which products under-convert, and how Kyma plugs in.</p>
                 <div class="contact-options">
                     <a href="mailto:vatsal@kymalifestyle.com" class="contact-button">Email Us</a>
                     <a href="https://linkedin.com/in/vazzup" target="_blank" class="contact-button secondary">Connect on LinkedIn</a>
@@ -288,7 +320,7 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <div class="logo">KYMA</div>
-                    <p>Conversational engagement and marketing stack for enterprises</p>
+                    <p>The AI salesperson for lenders — engagement, sales and analytics across every channel your borrower is on.</p>
                 </div>
                 <div class="footer-right">
                     <a href="#engage">Engage</a>
@@ -300,7 +332,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Kyma Lifestyle. All rights reserved.</p>
+                <p>&copy; 2026 Kyma. All rights reserved.</p>
             </div>
         </div>
     </footer>

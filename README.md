@@ -1,10 +1,12 @@
-# Kyma Lifestyle
+# Kyma
 
-Premium lifestyle benefits platform for card issuers.
+The AI salesperson for the Indian lending ecosystem.
 
 ## About
 
-Kyma integrates curated lifestyle experiences into card programs, helping banks and card issuers drive customer engagement, increase card spend, and improve retention.
+Kyma is an AI sales agent for NBFCs, PLAs (Private Lending Apps), LSPs (Loan Service Providers), and DSAs (Direct Selling Agents). It engages every inbound lead, reads intent from natural-language conversation, cross-sells the right loan product, maintains a relationship across sessions, and walks the borrower all the way to a KYC-complete, consented application.
+
+Live on WhatsApp today, voice next, cross-platform from day one.
 
 ## Website
 
