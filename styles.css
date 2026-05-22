@@ -1033,7 +1033,24 @@ section {
     isolation: isolate;
     background:
         linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.52) 4%, rgba(0, 0, 0, 0) 16%, rgba(0, 0, 0, 0.08) 66%, rgba(0, 0, 0, 0.24) 100%),
-        var(--bg-desktop) center / cover no-repeat;
+        var(--bg-desktop) center / cover no-repeat,
+        var(--black);
+}
+
+.sales-stack::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 -2px;
+    z-index: 1;
+    background: var(--white);
+    opacity: 0;
+    transition: opacity 0.58s ease;
+    will-change: opacity;
+    pointer-events: none;
+}
+
+.sales-stack.is-light::before {
+    opacity: 1;
 }
 
 .sales-stack::after {
@@ -1043,7 +1060,7 @@ section {
 
 .sales-stack .container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .stack-layout {
@@ -1100,18 +1117,97 @@ section {
 }
 
 .campaigns {
-    background: var(--white);
-    color: var(--black);
+    --campaign-fg: var(--white);
+    --campaign-muted: var(--muted);
+    --campaign-kicker-line: linear-gradient(90deg, var(--white), transparent);
+    --campaign-shell-border: var(--glass-line);
+    --campaign-shell-bg: var(--glass-line);
+    --campaign-shell-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+    --campaign-card-bg: linear-gradient(180deg, rgba(26, 26, 26, 0.86), rgba(10, 10, 10, 0.9)), rgba(0, 0, 0, 0.8);
+    --campaign-card-fg: var(--white);
+    --campaign-card-muted: var(--muted);
+    --campaign-card-index: var(--silver);
+    --campaign-card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    --campaign-active-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(203, 226, 242, 0.82)), var(--white);
+    --campaign-active-fg: var(--black);
+    --campaign-active-muted: rgba(0, 0, 0, 0.66);
+    --campaign-active-index: rgba(0, 0, 0, 0.46);
+    --campaign-demo-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.66)), var(--bg-desktop) center / cover no-repeat;
+    --campaign-chat-bg: linear-gradient(180deg, rgba(18, 18, 18, 0.7), rgba(8, 8, 8, 0.58));
+    --campaign-chat-header-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.02)), rgba(0, 0, 0, 0.48);
+    --campaign-chat-ribbon-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)), rgba(0, 0, 0, 0.22);
+    --campaign-chat-line: var(--glass-line);
+    --campaign-kyma-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.035)), rgba(0, 0, 0, 0.36);
+    --campaign-kyma-fg: var(--white);
+    --campaign-user-bg: linear-gradient(140deg, rgba(255, 255, 255, 0.96), rgba(203, 226, 242, 0.86) 58%, rgba(255, 255, 255, 0.9)), var(--white);
+    --campaign-user-fg: var(--black);
+    --campaign-system-bg: linear-gradient(145deg, rgba(172, 216, 244, 0.16), rgba(255, 255, 255, 0.035)), rgba(0, 0, 0, 0.24);
+    --campaign-system-fg: var(--blue);
+    --campaign-divider-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.03)), rgba(0, 0, 0, 0.26);
+    --campaign-divider-fg: var(--faint);
+    --campaign-flow-line: rgba(255, 255, 255, 0.08);
+    --campaign-flow-muted: var(--muted);
+    --campaign-flow-input: var(--faint);
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--black);
+    color: var(--campaign-fg);
+    transition: color 0.34s ease;
+}
+
+.campaigns.is-light {
+    --campaign-fg: var(--black);
+    --campaign-muted: rgba(0, 0, 0, 0.68);
+    --campaign-kicker-line: linear-gradient(90deg, var(--black), transparent);
+    --campaign-shell-border: rgba(0, 0, 0, 0.16);
+    --campaign-shell-bg: rgba(0, 0, 0, 0.12);
+    --campaign-shell-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --campaign-card-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.34)), rgba(246, 245, 241, 0.78);
+    --campaign-card-fg: var(--black);
+    --campaign-card-muted: rgba(0, 0, 0, 0.68);
+    --campaign-card-index: rgba(0, 0, 0, 0.42);
+    --campaign-card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    --campaign-active-bg: linear-gradient(180deg, rgba(26, 26, 26, 0.9), rgba(10, 10, 10, 0.94)), rgba(0, 0, 0, 0.86);
+    --campaign-active-fg: var(--white);
+    --campaign-active-muted: var(--white);
+    --campaign-active-index: var(--silver);
+    --campaign-demo-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.78)), var(--bg-desktop) center / cover no-repeat;
 }
 
 .campaigns .section-kicker,
-.campaigns .section-title,
+.campaigns .section-title {
+    color: var(--campaign-fg);
+    transition: color 0.34s ease;
+}
+
 .campaigns .section-subtitle {
-    color: var(--black);
+    color: var(--campaign-muted);
+    transition: color 0.34s ease;
 }
 
 .campaigns .section-kicker::before {
-    background: linear-gradient(90deg, var(--black), transparent);
+    background: var(--campaign-kicker-line);
+}
+
+.campaigns::before {
+    content: "";
+    position: absolute;
+    inset: -2px 0 0;
+    z-index: 0;
+    background: var(--white);
+    opacity: 0;
+    transition: opacity 0.58s ease;
+    will-change: opacity;
+    pointer-events: none;
+}
+
+.campaigns.is-light::before {
+    opacity: 1;
+}
+
+.campaigns > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .campaign-showcase {
@@ -1119,18 +1215,20 @@ section {
     grid-template-columns: minmax(320px, 0.78fr) minmax(420px, 0.92fr);
     gap: 1px;
     align-items: start;
-    border: 1px solid rgba(0, 0, 0, 0.16);
+    border: 1px solid var(--campaign-shell-border);
     border-radius: var(--radius-ui);
-    background: rgba(0, 0, 0, 0.12);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: var(--campaign-shell-bg);
+    box-shadow: var(--campaign-shell-shadow);
     overflow: hidden;
+    transition: background 0.34s ease, border-color 0.34s ease, box-shadow 0.34s ease;
 }
 
 .campaign-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1px;
-    background: rgba(0, 0, 0, 0.12);
+    background: var(--campaign-shell-bg);
+    transition: background 0.34s ease;
 }
 
 .campaign-card {
@@ -1141,71 +1239,72 @@ section {
     border: 0;
     border-radius: 0;
     text-align: left;
-    background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.34)),
-        rgba(246, 245, 241, 0.78);
-    color: var(--black);
+    background: var(--campaign-card-bg);
+    color: var(--campaign-card-fg);
     cursor: pointer;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    box-shadow: var(--campaign-card-shadow);
     -webkit-backdrop-filter: blur(var(--glass-blur-soft)) saturate(1.08);
     backdrop-filter: blur(var(--glass-blur-soft)) saturate(1.08);
-    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    transition: background 0.34s ease, color 0.34s ease, box-shadow 0.34s ease;
 }
 
 .campaign-card span {
     display: block;
     margin-bottom: 0.52rem;
-    color: rgba(0, 0, 0, 0.42);
+    color: var(--campaign-card-index);
     font-family: var(--mono);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: -0.01em;
     text-transform: uppercase;
+    transition: color 0.34s ease;
 }
 
 .campaign-card h3 {
-    color: var(--black);
+    color: var(--campaign-card-fg);
     font-family: var(--serif);
     font-size: 1.52rem;
     font-weight: 400;
     line-height: 1.05;
+    transition: color 0.34s ease;
 }
 
 .campaign-card p {
-    color: rgba(0, 0, 0, 0.68);
+    color: var(--campaign-card-muted);
     margin-top: 0.48rem;
     font-size: 0.82rem;
     line-height: 1.38;
+    transition: color 0.34s ease;
 }
 
 .campaign-card:hover,
 .campaign-card.active {
-    background:
-        linear-gradient(180deg, rgba(26, 26, 26, 0.9), rgba(10, 10, 10, 0.94)),
-        rgba(0, 0, 0, 0.86);
-    color: var(--white);
+    background: var(--campaign-active-bg);
+    color: var(--campaign-active-fg);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
 }
 
 .campaign-card:hover span,
 .campaign-card.active span {
-    color: var(--silver);
+    color: var(--campaign-active-index);
 }
 
 .campaign-card:hover h3,
-.campaign-card.active h3,
+.campaign-card.active h3 {
+    color: var(--campaign-active-fg);
+}
+
 .campaign-card:hover p,
 .campaign-card.active p {
-    color: var(--white);
+    color: var(--campaign-active-muted);
 }
 
 .campaign-demo {
     min-width: 0;
     height: 476px;
     padding: 0;
-    background:
-        linear-gradient(180deg, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.78)),
-        var(--bg-desktop) center / cover no-repeat;
+    background: var(--campaign-demo-bg);
+    transition: background 0.34s ease;
 }
 
 .campaign-demo .demo-shell {
@@ -1228,7 +1327,71 @@ section {
     height: 100%;
     border: 0;
     border-radius: 0;
+    background: var(--campaign-chat-bg);
     box-shadow: none;
+}
+
+.campaigns .chat-header {
+    border-bottom-color: var(--campaign-chat-line);
+    background: var(--campaign-chat-header-bg);
+}
+
+.campaigns .stage-ribbon {
+    border-bottom-color: var(--campaign-chat-line);
+    background: var(--campaign-chat-ribbon-bg);
+}
+
+.campaigns .message-bubble {
+    border-color: var(--campaign-chat-line);
+}
+
+.campaigns .chat-message.user .message-bubble {
+    color: var(--campaign-user-fg);
+    background: var(--campaign-user-bg);
+}
+
+.campaigns .chat-message.kyma .message-bubble,
+.campaigns .typing-indicator {
+    color: var(--campaign-kyma-fg);
+    background: var(--campaign-kyma-bg);
+    border-color: var(--campaign-chat-line);
+}
+
+.campaigns .system-bubble {
+    color: var(--campaign-system-fg);
+    background: var(--campaign-system-bg);
+}
+
+.campaigns .chat-divider {
+    color: var(--campaign-divider-fg);
+    background: var(--campaign-divider-bg);
+}
+
+.campaigns .consent-bubble,
+.campaigns .flow-card,
+.campaigns .offer-card {
+    border-left-color: var(--campaign-kyma-fg);
+}
+
+.campaigns .flow-field,
+.campaigns .offer-row {
+    border-bottom-color: var(--campaign-flow-line);
+}
+
+.campaigns .flow-label,
+.campaigns .offer-meta {
+    color: var(--campaign-flow-muted);
+}
+
+.campaigns .flow-input {
+    color: var(--campaign-flow-input);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sales-stack::before,
+    .campaigns::before {
+        transition: opacity 0.12s ease;
+    }
 }
 
 .campaign-demo .chat-messages {

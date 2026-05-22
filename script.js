@@ -335,6 +335,35 @@ function switchScenario(idx, userInitiated) {
 
 // Wire up tabs + start
 document.addEventListener('DOMContentLoaded', () => {
+    const salesStackSection = document.querySelector('#sales-stack');
+    const campaignsSection = document.querySelector('#campaigns');
+    let sectionRevealFrame = null;
+
+    function syncSectionReveals() {
+        if (!campaignsSection) return;
+        const rect = campaignsSection.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const shouldRevealLight = rect.top <= viewportHeight * 0.38 && rect.bottom > viewportHeight * 0.24;
+
+        if (salesStackSection) {
+            salesStackSection.classList.toggle('is-light', shouldRevealLight);
+        }
+        campaignsSection.classList.toggle('is-light', shouldRevealLight);
+
+        sectionRevealFrame = null;
+    }
+
+    function queueSectionRevealSync() {
+        if (sectionRevealFrame !== null) return;
+        sectionRevealFrame = window.requestAnimationFrame(syncSectionReveals);
+    }
+
+    syncSectionReveals();
+    window.addEventListener('scroll', queueSectionRevealSync, { passive: true });
+    window.addEventListener('resize', queueSectionRevealSync);
+    window.addEventListener('hashchange', queueSectionRevealSync);
+    window.setTimeout(queueSectionRevealSync, 0);
+
     document.querySelectorAll('.demo-tab').forEach((tab) => {
         tab.addEventListener('click', () => {
             const idx = parseInt(tab.dataset.scenario, 10);
@@ -361,7 +390,9 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        card.style.transition = card.classList.contains('campaign-card')
+            ? 'opacity 0.6s ease, transform 0.6s ease, background 0.34s ease, color 0.34s ease, box-shadow 0.34s ease'
+            : 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
     });
 });
