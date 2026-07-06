@@ -14,7 +14,7 @@ Visit [kymahq.com](https://kymahq.com)
 
 ## Contact
 
-- Email: vatsal@kymalifestyle.com
+- Email: vatsal@kymahq.com
 - LinkedIn: [Vatsal Kanakiya](https://linkedin.com/in/vazzup) | [Dhruvin Bagadia](https://www.linkedin.com/in/dhruvin-bagadia-a34450191/)
 
 ## Deployment

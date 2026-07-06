@@ -335,7 +335,6 @@ function switchScenario(idx, userInitiated) {
 
 // Wire up tabs + start
 document.addEventListener('DOMContentLoaded', () => {
-    const salesStackSection = document.querySelector('#sales-stack');
     const campaignsSection = document.querySelector('#campaigns');
     let sectionRevealFrame = null;
 
@@ -345,9 +344,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
         const shouldRevealLight = rect.top <= viewportHeight * 0.38 && rect.bottom > viewportHeight * 0.24;
 
-        if (salesStackSection) {
-            salesStackSection.classList.toggle('is-light', shouldRevealLight);
-        }
         campaignsSection.classList.toggle('is-light', shouldRevealLight);
 
         sectionRevealFrame = null;
@@ -386,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, observerOptions);
-    const cards = document.querySelectorAll('.pillar-card, .team-member, .step');
+    const cards = document.querySelectorAll('.pillar-card, .team-member');
     cards.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
