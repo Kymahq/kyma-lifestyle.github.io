@@ -60,13 +60,13 @@
         <section class="roles-section">
             <div class="container">
                 <div class="roles-grid">
-                    <a href="software-engineer-intern/" class="role-card">
+                    <a href="founding-engineer/" class="role-card">
                         <div class="role-info">
-                            <h3>Software Engineer Intern — AI / Agentic Systems</h3>
-                            <p>Build real-world agentic AI systems and production infrastructure powering conversational experiences.</p>
+                            <h3>Founding Engineer — AI / Agentic Systems</h3>
+                            <p>Build real-world agentic AI systems and production infrastructure powering conversational sales.</p>
                             <div class="role-meta">
                                 <span><i class="fas fa-location-dot"></i>Mumbai / Remote</span>
-                                <span><i class="fas fa-briefcase"></i>Internship</span>
+                                <span><i class="fas fa-briefcase"></i>Full-time</span>
                             </div>
                         </div>
                         <div class="role-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -95,26 +95,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        (() => {
-            const navContent = document.querySelector('.nav-content');
-            const navToggle = document.querySelector('.nav-toggle');
-            if (!navContent || !navToggle) return;
-
-            navToggle.addEventListener('click', () => {
-                const isOpen = navContent.classList.toggle('is-open');
-                navToggle.setAttribute('aria-expanded', String(isOpen));
-                navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-            });
-
-            navContent.querySelectorAll('.nav-links a').forEach((link) => {
-                link.addEventListener('click', () => {
-                    navContent.classList.remove('is-open');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navToggle.setAttribute('aria-label', 'Open menu');
-                });
-            });
-        })();
-    </script>
+    <script src="../script.js"></script>
 </body>
 </html>

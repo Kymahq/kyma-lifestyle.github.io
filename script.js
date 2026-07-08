@@ -1,3 +1,23 @@
+const KYMA_GA_MEASUREMENT_ID = 'G-QMLMKLEVBB';
+
+(() => {
+    if (window.__kymaGoogleAnalyticsLoaded) return;
+    window.__kymaGoogleAnalyticsLoaded = true;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+        window.dataLayer.push(arguments);
+    };
+
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(KYMA_GA_MEASUREMENT_ID)}`;
+    document.head.appendChild(tag);
+
+    window.gtag('js', new Date());
+    window.gtag('config', KYMA_GA_MEASUREMENT_ID);
+})();
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
