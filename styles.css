@@ -1501,6 +1501,73 @@ section {
     text-transform: uppercase;
 }
 
+/* Privacy policy */
+.privacy-main {
+    min-height: 100vh;
+    background: var(--black);
+}
+
+.privacy-container {
+    width: min(760px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 150px 0 110px;
+}
+
+.privacy-header {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.privacy-header h1 {
+    font-size: clamp(3.2rem, 8vw, 6rem);
+    line-height: 0.95;
+}
+
+.privacy-container .privacy-meta {
+    margin-top: 1.4rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.privacy-container section {
+    padding: 2.5rem 0 0;
+}
+
+.privacy-container h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.2;
+}
+
+.privacy-container p,
+.privacy-container li {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.privacy-container p + p {
+    margin-top: 1rem;
+}
+
+.privacy-container ul {
+    margin-top: 1rem;
+    padding-left: 1.4rem;
+}
+
+.privacy-container li + li {
+    margin-top: 0.65rem;
+}
+
+.privacy-container a {
+    color: var(--white);
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 4px;
+}
+
 /* Careers */
 .careers-hero,
 .roles-section,
